@@ -6,7 +6,7 @@ const Right = () => {
   const [tab, setTab] = useState('saas');
 
   return (
-    <div className="flex h-full w-1/2 flex-col items-center justify-center gap-5 p-5">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-5 p-5 md:w-1/2">
       {/* card */}
       <div className="flex w-full flex-col items-center rounded-xl border bg-white">
         {/* top */}
@@ -51,53 +51,71 @@ const Right = () => {
         <div className="flex w-full flex-col items-center p-5 text-sm font-semibold">
           {tab === 'saas' ? (
             <div className="flex w-full max-w-[450px] flex-col items-center justify-center gap-3">
-              <div className="flex w-full items-center justify-center gap-2 rounded-lg border p-3">
+              <a
+                href="/dashboard"
+                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
+              >
                 <img
                   src={'/brands/github.svg'}
                   alt={'github'}
                   className={`w-5`}
                 />
                 Sign in with Github
-              </div>
-              <div className="flex w-full items-center justify-center gap-2 rounded-lg border p-3">
+              </a>
+              <a
+                href="/dashboard"
+                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
+              >
                 <img
                   src={'/brands/bitbucket.svg'}
                   alt={'bitbucket'}
                   className={`w-5`}
                 />
                 Sign in with Bitbucket
-              </div>
-              <div className="flex w-full items-center justify-center gap-2 rounded-lg border p-3">
+              </a>
+              <a
+                href="/dashboard"
+                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
+              >
                 <img
                   src={'/brands/azure-devops.svg'}
                   alt={'azure-devops'}
                   className={`w-5`}
                 />
                 Sign in with Azure Devops
-              </div>
-              <div className="flex w-full items-center justify-center gap-2 rounded-lg border p-3">
+              </a>
+              <a
+                href="/dashboard"
+                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
+              >
                 <img
                   src={'/brands/gitlab.svg'}
                   alt={'gitlab'}
                   className={`w-5`}
                 />
                 Sign in with Gitlab
-              </div>
+              </a>
             </div>
           ) : (
             <div className="flex min-h-[220px] w-full max-w-[450px] flex-col items-center justify-start gap-3">
-              <div className="flex w-full items-center justify-center gap-2 rounded-lg border p-3">
+              <a
+                href="/dashboard"
+                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
+              >
                 <img
                   src={'/brands/gitlab.svg'}
                   alt={'gitlab'}
                   className={`w-5`}
                 />
                 Self hosted Gitlab
-              </div>
-              <div className="flex w-full items-center justify-center gap-2 rounded-lg border p-3">
+              </a>
+              <a
+                href="/dashboard"
+                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
+              >
                 <KeyRound className={`w-5`} />
                 Sign in with SSO
-              </div>
+              </a>
             </div>
           )}
         </div>

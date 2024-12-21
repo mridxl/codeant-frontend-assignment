@@ -3,7 +3,7 @@ import LoginRight from '../components/Login/Right';
 
 const Login = () => {
   return (
-    <div className="flex h-screen w-screen">
+    <div className="flex h-screen w-screen justify-center">
       <LoginLeft />
       <LoginRight />
     </div>

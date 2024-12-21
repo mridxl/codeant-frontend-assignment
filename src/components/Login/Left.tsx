@@ -3,7 +3,7 @@ import Card from '../Card';
 
 const Left = () => {
   return (
-    <div className="relative flex h-full w-1/2 flex-col items-center justify-center border-r bg-white">
+    <div className="relative hidden h-full w-1/2 flex-col items-center justify-center border-r bg-white md:flex">
       <Card className="relative z-10 w-3/5">
         <div className="flex w-full items-center justify-start gap-2 p-4">
           <img className="size-6" src="/codeant-small.svg" alt="logo" />
@@ -14,7 +14,7 @@ const Left = () => {
 
         <hr className="w-full self-stretch" />
 
-        <div className="flex w-full justify-evenly gap-3 p-4 pb-5">
+        <div className="flex w-full justify-evenly gap-3 p-4 pb-5 text-center">
           <div className="flex flex-col items-center">
             <span className="text-base font-bold text-[#081735]">30+</span>
             <span className="text-xs">Language Support</span>
