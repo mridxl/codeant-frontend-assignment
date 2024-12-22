@@ -7,7 +7,7 @@ import { repositories } from '../db/db';
 import RepoCard from '../components/ui/RepoCard';
 
 const Dashboard = () => {
-  const [search, setSearch] = React.useState<string>('');
+  const [_, setSearch] = React.useState<string>('');
   const [filteredRepos, setFilteredRepos] = React.useState(repositories);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
