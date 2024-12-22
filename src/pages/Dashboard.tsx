@@ -24,11 +24,10 @@ const Dashboard = () => {
   return (
     <div className="h-full w-full">
       <Layout>
-        <main className="scrollbar m-4 min-h-[calc(100vh-32px)] w-screen overflow-y-auto rounded-lg border bg-white">
-          {/* header */}
+        <main className="scrollbar min-h-[calc(100vh-32px)] w-screen overflow-y-auto rounded-lg border bg-white md:m-4 md:ml-[21vw] md:w-[85vw]">
           <div className="flex w-full flex-col items-center justify-center gap-4 border-b p-4 px-6">
-            <div className="flex w-full items-center justify-between">
-              <div className="flex flex-col">
+            <div className="flex w-full flex-col items-start justify-center md:flex-row md:items-center md:justify-between">
+              <div className="flex flex-col py-2 md:p-0">
                 <h1 className="text-lg font-semibold">Repositories</h1>
                 <p className="text-xs text-gray-400">33 total repositories</p>
               </div>
@@ -61,7 +60,6 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          {/* repos */}
           <div className="w-full">
             {filteredRepos.map((repo) => (
               <RepoCard
