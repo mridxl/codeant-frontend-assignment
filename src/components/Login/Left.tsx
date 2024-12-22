@@ -1,5 +1,5 @@
 import { ArrowUp } from 'lucide-react';
-import Card from '../Card';
+import Card from '../ui/Card';
 
 const Left = () => {
   return (

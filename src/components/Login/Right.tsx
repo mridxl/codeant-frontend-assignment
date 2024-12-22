@@ -1,17 +1,16 @@
 import { useState } from 'react';
 import { KeyRound } from 'lucide-react';
 import { cn } from '../../lib/utils';
+import { Link } from 'react-router';
+import Button from '../ui/Button';
 
 const Right = () => {
   const [tab, setTab] = useState('saas');
 
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-5 p-5 md:w-1/2">
-      {/* card */}
       <div className="flex w-full flex-col items-center rounded-xl border bg-white">
-        {/* top */}
         <div className="flex w-full flex-col items-center justify-start gap-4 border-b p-5">
-          {/* header*/}
           <div className="flex flex-col items-center justify-center gap-6">
             <span className="font-satoshi justify- flex gap-2 text-xl font-light antialiased">
               <img className="size-7" src="/codeant-small.svg" alt="logo" />
@@ -21,7 +20,6 @@ const Right = () => {
               Welcome to CodeAnt AI
             </span>
           </div>
-          {/* tabs */}
           <div className="flex w-[90%] items-center justify-center text-base font-semibold">
             <div
               className={cn(
@@ -47,75 +45,40 @@ const Right = () => {
             </div>
           </div>
         </div>
-        {/* tab content */}
         <div className="flex w-full flex-col items-center p-5 text-sm font-semibold">
           {tab === 'saas' ? (
             <div className="flex w-full max-w-[450px] flex-col items-center justify-center gap-3">
-              <a
-                href="/dashboard"
-                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
-              >
-                <img
-                  src={'/brands/github.svg'}
-                  alt={'github'}
-                  className={`w-5`}
-                />
-                Sign in with Github
-              </a>
-              <a
-                href="/dashboard"
-                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
-              >
-                <img
-                  src={'/brands/bitbucket.svg'}
-                  alt={'bitbucket'}
-                  className={`w-5`}
-                />
-                Sign in with Bitbucket
-              </a>
-              <a
-                href="/dashboard"
-                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
-              >
-                <img
-                  src={'/brands/azure-devops.svg'}
-                  alt={'azure-devops'}
-                  className={`w-5`}
-                />
-                Sign in with Azure Devops
-              </a>
-              <a
-                href="/dashboard"
-                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
-              >
-                <img
-                  src={'/brands/gitlab.svg'}
-                  alt={'gitlab'}
-                  className={`w-5`}
-                />
-                Sign in with Gitlab
-              </a>
+              <Link className="w-full" to="/dashboard">
+                <Button imgSrc="/brands/github.svg" imgAlt="github">
+                  Sign in with Github
+                </Button>
+              </Link>
+              <Link className="w-full" to="/dashboard">
+                <Button imgSrc="/brands/bitbucket.svg" imgAlt="bitbucket">
+                  Sign in with Bitbucket
+                </Button>
+              </Link>
+              <Link className="w-full" to="/dashboard">
+                <Button imgSrc="/brands/azure-devops.svg" imgAlt="azure-devops">
+                  Sign in with Azure Devops
+                </Button>
+              </Link>
+              <Link className="w-full" to="/dashboard">
+                <Button imgSrc="/brands/gitlab.svg" imgAlt="gitlab">
+                  Sign in with Gitlab
+                </Button>
+              </Link>
             </div>
           ) : (
             <div className="flex min-h-[220px] w-full max-w-[450px] flex-col items-center justify-start gap-3">
-              <a
-                href="/dashboard"
-                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
-              >
-                <img
-                  src={'/brands/gitlab.svg'}
-                  alt={'gitlab'}
-                  className={`w-5`}
-                />
-                Self hosted Gitlab
-              </a>
-              <a
-                href="/dashboard"
-                className="flex w-full items-center justify-center gap-2 rounded-lg border p-3"
-              >
-                <KeyRound className={`w-5`} />
-                Sign in with SSO
-              </a>
+              <Link className="w-full" to="/dashboard">
+                <Button imgSrc="/brands/gitlab.svg" imgAlt="gitlab">
+                  Self hosted Gitlab
+                </Button>
+              </Link>
+              <Link className="w-full" to="/dashboard">
+                <Button icon={<KeyRound />}>Sign in with SSO</Button>
+              </Link>
             </div>
           )}
         </div>
