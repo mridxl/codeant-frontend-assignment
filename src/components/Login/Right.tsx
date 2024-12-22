@@ -12,7 +12,7 @@ const Right = () => {
       <div className="flex w-full flex-col items-center rounded-xl border bg-white">
         <div className="flex w-full flex-col items-center justify-start gap-4 border-b p-5">
           <div className="flex flex-col items-center justify-center gap-6">
-            <span className="font-satoshi justify- flex gap-2 text-xl font-light antialiased">
+            <span className="font-satoshi flex justify-center gap-2 text-xl font-light antialiased">
               <img className="size-7" src="/codeant-small.svg" alt="logo" />
               CodeAnt
             </span>
