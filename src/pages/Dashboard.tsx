@@ -13,8 +13,10 @@ const Dashboard = () => {
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
     setFilteredRepos(
-      repositories.filter((repo) =>
-        repo.name.toLowerCase().includes(e.target.value.toLowerCase())
+      repositories.filter(
+        (repo) =>
+          repo.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+          repo.language.toLowerCase().includes(e.target.value.toLowerCase())
       )
     );
   };
