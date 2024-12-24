@@ -25,7 +25,7 @@ const Dashboard = () => {
     <div className="h-full w-full">
       <Layout>
         <main className="scrollbar min-h-[calc(100vh-32px)] w-screen overflow-y-auto rounded-lg border bg-white md:m-4 md:ml-[21vw] md:w-[85vw]">
-          <div className="flex w-full flex-col items-center justify-center gap-4 border-b p-4 px-6">
+          <div className="sticky top-0 flex w-full flex-col items-center justify-center gap-4 border-b bg-white p-4 px-6">
             <div className="flex w-full flex-col items-start justify-center md:flex-row md:items-center md:justify-between">
               <div className="flex flex-col py-2 md:p-0">
                 <h1 className="text-lg font-semibold">Repositories</h1>
@@ -50,7 +50,7 @@ const Dashboard = () => {
               <div>
                 <Button
                   icon={<Search className="size-4 text-gray-400" />}
-                  className="rounded-md p-1"
+                  className="cursor-default rounded-md p-1"
                 >
                   <Input
                     placeholder="Search Repositories"
