@@ -134,7 +134,7 @@ const MobileSidebar = ({
 
       <div
         className={cn(
-          'fixed inset-y-0 left-0 z-50 flex h-[60vh] w-full flex-col justify-start border-r bg-white font-semibold text-[#414651] transition-transform duration-300 md:hidden',
+          'fixed inset-y-0 left-0 z-50 flex h-max w-full flex-col justify-start border-r bg-white font-semibold text-[#414651] transition-transform duration-300 md:hidden',
           isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
         )}
       >
