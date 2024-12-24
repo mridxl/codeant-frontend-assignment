@@ -16,7 +16,7 @@ const RepoCard = ({
   lastUpdate,
 }: RepoCardProps) => {
   return (
-    <div className="border-b border-gray-200 bg-white p-4 px-5 shadow-sm">
+    <div className="cursor-pointer border-b border-gray-200 bg-white p-4 px-5 shadow-sm hover:bg-[#FAFAFA]">
       <div className="flex items-center space-x-2">
         <span className="text-sm font-medium text-gray-900">{name}</span>
         <span className="rounded-full bg-blue-100 px-2 py-0.5 text-[0.65rem] text-blue-600">
